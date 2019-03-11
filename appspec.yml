@@ -1,16 +1,16 @@
 version: 0.0
 os: linux
 files:
- - source: script/newcode.sh
+ - source: scripts/newcode.sh
    destination: /var/www/html
 Hooks:
 
  BeforeInstall:
- - location : script/installation.sh
+ - location : scripts/installation.sh
    timeout : 300
    runas : root
 ApplicationStart:
- - location : script/start.sh
+ - location : scripts/start.sh
    timeout : 300
    runas : root
 runas : root
